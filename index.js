@@ -28,8 +28,10 @@ let transporter = nodemailer.createTransport({
    //host: 'smtppro.zoho.in',
 
     auth: {
-        user: sntp_LOGIN, //'mayameneger@gmail.com', // @gmail.com generated ethereal user
-        pass: sntp_PASSWORD///'MayaRiff19051991', // generated ethereal password
+        user: 'mayameneger@gmail.com', // @gmail.com generated ethereal user
+        pass: 'MayaRiff19051991',
+        //user: sntp_LOGIN, //'mayameneger@gmail.com', // @gmail.com generated ethereal user
+        //pass: sntp_PASSWORD///'MayaRiff19051991', // generated ethereal password
     },
 });
 
