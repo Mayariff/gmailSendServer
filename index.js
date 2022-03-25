@@ -3,12 +3,19 @@ const nodemailer = require("nodemailer");
 const cors = require('cors')
 const bodyParser = require('body-parser')
 
+
 const app = express()
-const port = 3010
+const port = process.env.PORT || 3010;
+
+let sntp_LOGIN = process.env.sntp_LOGIN
+let sntp_PASSWORD = process.env.sntp_PASSWORD
+
 app.use(cors())
 app.use(bodyParser.urlencoded({ extended: false }))
 // parse application/json
 app.use(bodyParser.json())
+
+
 
 let transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -21,8 +28,8 @@ let transporter = nodemailer.createTransport({
    //host: 'smtppro.zoho.in',
 
     auth: {
-        user: 'mayameneger@gmail.com', // @gmail.com generated ethereal user
-        pass: 'MayaRiff19051991', // generated ethereal password
+        user: sntp_LOGIN, //'mayameneger@gmail.com', // @gmail.com generated ethereal user
+        pass: sntp_PASSWORD///'MayaRiff19051991', // generated ethereal password
     },
 });
 
