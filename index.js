@@ -5,7 +5,7 @@ const bodyParser = require('body-parser')
 
 
 const app = express()
-let port = process.env.PORT || 3010;
+let port = process.env.PORT ||  3010;
 
 let sntp_LOGIN = process.env.sntp_LOGIN
 let sntp_PASSWORD = process.env.sntp_PASSWORD
